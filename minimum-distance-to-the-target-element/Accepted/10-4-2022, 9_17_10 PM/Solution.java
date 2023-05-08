@@ -1,0 +1,17 @@
+// https://leetcode.com/problems/minimum-distance-to-the-target-element
+
+class Solution {
+    public int getMinDistance(int[] nums, int target, int start) {
+        int ans = Integer.MAX_VALUE;
+        int min = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
+                min = Math.abs(i - start);
+                if (ans > min) {
+                    ans = min;
+                }
+            }
+        }
+        return ans;
+    }
+}

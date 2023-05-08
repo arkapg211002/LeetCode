@@ -1,0 +1,15 @@
+// https://leetcode.com/problems/reverse-string
+
+class Solution {
+    public void reverseString(char[] s) {
+        int n=s.length/2;
+        char ch='\u0000';
+        for(int i=0;i<n;i++)
+        {
+            ch=s[i];
+            s[i]=s[s.length-1-i];
+            s[s.length-1-i]=ch;
+        }
+        
+    }
+}
